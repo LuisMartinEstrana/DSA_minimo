@@ -25,7 +25,7 @@ public class Users {
     @Expose
     private String following;
 
-    @SerializedName("avater_url")
+    @SerializedName("avatar_url")
     @Expose
     private String avatarUrl;
 

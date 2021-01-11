@@ -19,7 +19,6 @@ import java.util.List;
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolderData> {
 
     List<Usuario> listusuarios;
-    Users users;
     int globalposition;
     public RecyclerViewAdapter(List<Usuario> listusuarios)
     {
@@ -29,11 +28,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @NonNull
     @Override
-    public RecyclerViewAdapter.ViewHolderData onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolderData onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.recyclerview_item,null,false);
 
-        return new RecyclerViewAdapter.ViewHolderData(view);
+        return new ViewHolderData(view);
     }
 
     @Override
